@@ -3,7 +3,7 @@
 Retention Planner predicts which telecom customers are about to leave, explains each prediction in plain
 language, and turns the predictions into a retention campaign plan that respects a budget.
 
-**Live app:** `https://<your-app-name>.streamlit.app`
+**Live app:** `https://telco-retention-planner-erick.streamlit.app`
 
 Built for *Aprendizaje Automático, Task 7* (Telco Customer Churn) by Erick Olivo.
 
