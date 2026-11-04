@@ -1,0 +1,211 @@
+{
+  "created_utc": "2026-11-04T06:09:48+00:00",
+  "model": "LightGBM (NSGA-II, one-standard-error selection)",
+  "final_params": {
+    "n_estimators": 112,
+    "learning_rate": 0.029266761285490727,
+    "num_leaves": 8,
+    "min_child_samples": 88,
+    "colsample_bytree": 0.8827429375390468,
+    "subsample": 0.6888431241882921,
+    "reg_lambda": 4.268407710065496
+  },
+  "business_threshold": 0.36,
+  "economics": {
+    "horizon_months": 12,
+    "gross_margin": 0.5,
+    "contact_cost": 40.0,
+    "success_rate": 0.3
+  },
+  "economics_note": "Hypothetical assumptions for illustration, not estimated from data.",
+  "base_rate_train": 0.2653532126375577,
+  "cv_metrics": {
+    "accuracy": 0.8051136247224197,
+    "precision": 0.6794417121937242,
+    "recall": 0.505685618729097,
+    "f1": 0.5794673941274927,
+    "roc_auc": 0.8489570969605051,
+    "pr_auc": 0.6650356554723967,
+    "total_leaves": 896.0
+  },
+  "test_metrics": {
+    "test, t = 0.50": {
+      "accuracy": 0.8055358410220014,
+      "precision": 0.6736111111111112,
+      "recall": 0.5187165775401069,
+      "f1": 0.5861027190332326,
+      "roc_auc": 0.8468728202743548,
+      "pr_auc": 0.6601150875192668,
+      "contacted": 288.0
+    },
+    "test, t* = 0.36": {
+      "accuracy": 0.7835344215755855,
+      "precision": 0.5764966740576497,
+      "recall": 0.6951871657754011,
+      "f1": 0.6303030303030303,
+      "roc_auc": 0.8468728202743548,
+      "pr_auc": 0.6601150875192668,
+      "contacted": 451.0
+    },
+    "CV (OOF), t* = 0.36": {
+      "accuracy": 0.7878949236776713,
+      "precision": 0.5855188141391106,
+      "recall": 0.6869565217391305,
+      "f1": 0.6321945213911973,
+      "roc_auc": 0.8479262032336183,
+      "pr_auc": 0.6612555913506469,
+      "contacted": 1754.0
+    }
+  },
+  "confusion_matrix_test": {
+    "t_0.50": [
+      [
+        941,
+        94
+      ],
+      [
+        180,
+        194
+      ]
+    ],
+    "t_business": [
+      [
+        844,
+        191
+      ],
+      [
+        114,
+        260
+      ]
+    ]
+  },
+  "pareto": {
+    "one_se_threshold": 0.6603469829155332,
+    "reference_pr_auc": 0.6698519232081072,
+    "selected_trial": 36,
+    "knee_trial": 31
+  },
+  "input_schema": {
+    "columns": [
+      "gender",
+      "SeniorCitizen",
+      "Partner",
+      "Dependents",
+      "tenure",
+      "PhoneService",
+      "MultipleLines",
+      "InternetService",
+      "OnlineSecurity",
+      "OnlineBackup",
+      "DeviceProtection",
+      "TechSupport",
+      "StreamingTV",
+      "StreamingMovies",
+      "Contract",
+      "PaperlessBilling",
+      "PaymentMethod",
+      "MonthlyCharges",
+      "TotalCharges"
+    ],
+    "categorical": {
+      "gender": [
+        "Female",
+        "Male"
+      ],
+      "SeniorCitizen": [
+        "0",
+        "1"
+      ],
+      "Partner": [
+        "No",
+        "Yes"
+      ],
+      "Dependents": [
+        "No",
+        "Yes"
+      ],
+      "PhoneService": [
+        "No",
+        "Yes"
+      ],
+      "MultipleLines": [
+        "No",
+        "No phone service",
+        "Yes"
+      ],
+      "InternetService": [
+        "DSL",
+        "Fiber optic",
+        "No"
+      ],
+      "OnlineSecurity": [
+        "No",
+        "No internet service",
+        "Yes"
+      ],
+      "OnlineBackup": [
+        "No",
+        "No internet service",
+        "Yes"
+      ],
+      "DeviceProtection": [
+        "No",
+        "No internet service",
+        "Yes"
+      ],
+      "TechSupport": [
+        "No",
+        "No internet service",
+        "Yes"
+      ],
+      "StreamingTV": [
+        "No",
+        "No internet service",
+        "Yes"
+      ],
+      "StreamingMovies": [
+        "No",
+        "No internet service",
+        "Yes"
+      ],
+      "Contract": [
+        "Month-to-month",
+        "One year",
+        "Two year"
+      ],
+      "PaperlessBilling": [
+        "No",
+        "Yes"
+      ],
+      "PaymentMethod": [
+        "Bank transfer (automatic)",
+        "Credit card (automatic)",
+        "Electronic check",
+        "Mailed check"
+      ]
+    },
+    "numeric": {
+      "tenure": {
+        "min": 0.0,
+        "max": 72.0
+      },
+      "MonthlyCharges": {
+        "min": 18.25,
+        "max": 118.75
+      },
+      "TotalCharges": {
+        "min": 18.8,
+        "max": 8684.8
+      }
+    }
+  },
+  "versions": {
+    "scikit-learn": "1.6.1",
+    "lightgbm": "4.6.0",
+    "shap": "0.54.1",
+    "lime": "0.2.0.1",
+    "pandas": "2.2.3",
+    "numpy": "2.5.4"
+  },
+  "seed": 42
+}
