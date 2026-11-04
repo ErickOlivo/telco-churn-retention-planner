@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-11-04T06:09:48+00:00",
+  "created_utc": "2026-11-04T05:56:29+00:00",
   "model": "LightGBM (NSGA-II, one-standard-error selection)",
   "final_params": {
     "n_estimators": 112,
@@ -205,7 +205,7 @@
     "shap": "0.54.1",
     "lime": "0.2.0.1",
     "pandas": "2.2.3",
-    "numpy": "2.5.4"
+    "numpy": "2.4.6"
   },
   "seed": 42
 }
